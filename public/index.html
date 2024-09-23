@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind css</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-600 font-body">
+    <div class="grid md:grid-cols-3">
+        <div class="md:col-span-1 md:flex md:justify-end"><!-- Start nav -->
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
+                    <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+                        <a href="/" class="hover:text-gray-700">Foodelicious</a>
+                    </h1>
+                    <div class="px-4 md:hidden" id="burger">
+                        <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>
+                          
+                    </div>
+                </div>
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <li class="text-gray-700 font-bold py-1">
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-red-600">
+                            <span>Home</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path class="w-5 ml-4" stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                              </svg>
+                              
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="px-4 flex justify-end  border-r-4 border-white">
+                            <span>About</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path class="w-5 ml-4" stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+                              </svg>
+                              
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="px-4 flex justify-end  border-r-4 border-white">
+                            <span>Contact</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path class="w-5 ml-4" stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                              </svg>
+                              
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- End nav -->
+
+        <main class="px-16 mt-12 font-mono md:col-span-2">
+            <div class="flex md:justify-end sm:justify-center">
+                <a href="#" class="btn border-blue-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500">Login</a>
+                <a href="" class="btn ml-2 border-blue-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500">Sign up</a>
+            </div>
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+                <h3 class="text-2xl font-semibold">For foodies</h3>
+            </header>
+            <div>
+                <h4 class="font-bold border-b border-gray-100">Latest Recipes</h4>
+                <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                    <!-- Cards go here -->
+                     <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <img src="img/naan-bread.jpg" alt="naan" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Naan bread</span>
+                            <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                        </div>
+                        <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                              </svg>
+                            <span>25min</span>
+                         </div>
+                     </div>
+            
+                   
+                     <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <img src="img/cinnamon-buns.jpg" alt="beef" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Cinnamon buns</span>
+                            <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                        </div>
+                        <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                            
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                              </svg>
+                            <span>30min</span>
+                         </div>
+                     </div>
+        
+                     <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <img src="img/lemon-bread.jpg" alt="beef" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="m-4">
+                            <span class="font-bold">Lemon bread</span>
+                            <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                        </div>
+                        <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                            
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                              </svg>
+                            <span>50min</span>
+                         </div>
+                     </div>
+                </div>
+                <h4 class="font-bold border-b">Cakes</h4>
+                <div>
+                    <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                        <!-- Cards go here -->
+                         <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                            <img src="img/plain-cake.jpg" alt="Plain" class="w-full h-32 sm:h-48 object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Plain cake</span>
+                                <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                            </div>
+                            <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>
+                                <span>50min</span>
+                             </div>
+                         </div>
+                
+                       
+                         <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                            <img src="img/vanila-cake.jpg" alt="Vanila" class="w-full h-32 sm:h-48 object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Vanila cake</span>
+                                <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                            </div>
+                            <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                                
+                                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>
+                                <span>60min</span>
+                             </div>
+                         </div>
+            
+                         <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                            <img src="img/strawberry-cake.jpg" alt="Strawberry" class="w-full h-32 sm:h-48 object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Strawberry cake</span>
+                                <span class="block text-gray-500 text-sm">Recipe by Hiza</span>
+                            </div>
+                            <div class="bg-yellow-600 text-yellow-900 uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                                
+                                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>
+                                <span>60min</span>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="btn bg-yellow-500 mt-2 text-white hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load more....</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
